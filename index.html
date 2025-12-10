@@ -10,17 +10,17 @@
         margin: 0;
         padding: 0;
         background: url('https://i.imgur.com/4YV5cHW.jpeg') center/cover no-repeat fixed;
-        /* Use any theater background image you like */
         font-family: "Arial", sans-serif;
         color: white;
         text-align: center;
     }
 
     .overlay {
-        background: rgba(0, 0, 0, 0.7);
-        height: 100vh;
+        background: rgba(0, 0, 0, 0.75);
+        min-height: 100vh;
         width: 100%;
         padding-top: 40px;
+        box-sizing: border-box;
     }
 
     h1 {
@@ -31,7 +31,7 @@
     }
 
     .theater-frame {
-        width: 80%;
+        width: 85%;
         max-width: 900px;
         margin: auto;
         padding: 20px;
@@ -39,6 +39,7 @@
         border-radius: 20px;
         box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
         border: 8px solid #2d2d2d;
+        box-sizing: border-box;
     }
 
     .theater-frame::before,
@@ -52,10 +53,9 @@
         border-radius: 5px;
     }
 
-    iframe {
+    video {
         width: 100%;
-        height: 500px;
-        border: none;
+        height: auto;
         border-radius: 10px;
     }
 </style>
@@ -67,16 +67,14 @@
     <h1>Enjoy 🎬</h1>
 
     <div class="theater-frame">
-        <!-- Replace this iframe with your Google Drive embed link -->
-        <iframe
-            src="https://drive.google.com/file/d/1g-HVu7Q3YWeMnHpbqPLannAseMwxrx2Q/preview"
-            width="100%"
-            height="500"
-            allow="autoplay"
-            allowfullscreen
-            webkitallowfullscreen
-            mozallowfullscreen>
-        </iframe>
+
+        <!-- ✔ FullScreen Supported Video Player -->
+        <video controls playsinline controlsList="nodownload">
+            <source src="https://drive.google.com/uc?id=1g-HVu7Q3YWeMnHpbqPLannAseMwxrx2Q&export=download" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    </div>
 
 </div>
 </body>
